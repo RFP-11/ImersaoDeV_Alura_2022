@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imersão Dev Alura - Aula 01</title>
+    <style>
+        body {
+        font-family: 'Roboto Mono',monospace;
+        min-height: 400px;
+        background-image: url('https://caelum-online-public.s3.amazonaws.com/imersao-dev-3/bg.png');
+        background-color: #182399e1;
+        background-size: 80vh;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        }
+
+        .container {
+        text-align: center;
+        padding: 20px;
+        height: 100vh;
+        }
+
+        .page-title {
+        color:#ffffff;
+        margin: 0 0 5px;
+        }
+
+        .page-subtitle {
+        color:#ffffff;
+        margin-top: 5px;
+        }
+
+        .page-logo {
+        width: 200px;
+        }
+
+        .alura-logo {
+        width: 40px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">
+        Calculadora de média</h1>
+        <p class="page-subtitle">
+        Descubra qual a sua média de nota de todas as provas!
+        </p>
+        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt="">
+    </div>
+    <a href="https://alura.com.br/" target="_blank">
+    <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+    </a>
+
+    <h2>Executando no console!</h2>
+    <p>Aprendendo a usar o console: click com o botão esquerdo -> inspecionar -> console</p>
+    <script>
+        var name = "Rafael"
+        // Escrevi tudo em inglês para treinar meu inglês...
+        var firstSemesterGrade = 9
+        var secondSemesterGrade = 7.2
+        var thirdSemesterGrade = 6
+        var fourthSemesterGrade = 8.3
+
+        var finalGrade = (firstSemesterGrade + secondSemesterGrade + thirdSemesterGrade + fourthSemesterGrade) / 4
+
+        var finalGradeFixed = finalGrade.toFixed(1)
+
+        console.log("Welcome " + name)
+
+        console.log("Grade average: " + finalGradeFixed)
+
+        /* 
+        Desafios:
+
+        # Dependendo da nota, mostrar se a aluna ou aluno foi aprovada(o) ou não
+
+        # Alterar o fundo da tela da maneira que achar mais legal
+
+        # Imprimir na própria página o resultado, ao invés do console
+
+        # Criar um conversor de temperaturas entre farenheit e celcius
+
+        # Colocar a conta inteira da média em apenas uma linha
+        */
+
+
+        // Desafio: Colocar a conta inteira da média em apenas uma linha
+        console.log("Grade average: " + ((firstSemesterGrade + secondSemesterGrade + thirdSemesterGrade + fourthSemesterGrade) / 4).toFixed(1))
+
+        // Desafio: Dependendo da nota, mostrar se o aluno(a) foi aprovado(a) ou não
+        if (finalGradeFixed >= 9){
+        console.log("Letter Grade: A");
+        console.log("Approved");
+        }
+        else if (finalGradeFixed >= 8){
+        console.log("Letter Grade: B");
+        console.log("Approved");
+        }
+        else if (finalGradeFixed >= 7){
+        console.log("Letter Grade: C");
+        console.log("Approved");
+        }
+        else if (finalGradeFixed >= 6){
+        console.log("Letter Grade: D");
+        console.log("Approved");
+        }
+        else{
+        console.log("Letter Grade: F");
+        console.log("Disapproved");
+        }
+
+        // Desafio: Imprimir na própria página o resultado, ao invés do console
+        alert("Grade average: " + ((firstSemesterGrade + secondSemesterGrade + thirdSemesterGrade + fourthSemesterGrade) / 4).toFixed(1))
+    
+    </script>
+</body>
+</html>
